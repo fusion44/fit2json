@@ -17,7 +17,7 @@ class DeviceSettings {
   String backlight_mode;
   bool activity_tracker_enabled;
   bool move_alert_enabled;
-  int mounting_side;
+  String mounting_side;
   bool lactate_threshold_autodetect_enabled;
   int number_of_screens;
 
@@ -33,32 +33,46 @@ class DeviceSettings {
 
     for (var i = 0; i < m.fields.length; i++) {
       var field = m.fields[i];
-      if (field.fieldName == 'utc_offset') {
-        ds.utc_offset = ensureInt(m.values[i].value);
-      } else if (field.fieldName == 'time_offset') {
-        ds.time_offset = ensureInt(m.values[i].value);
-      } else if (field.fieldName == 'autosync_min_steps') {
-        ds.autosync_min_steps = ensureInt(m.values[i].value);
-      } else if (field.fieldName == 'autosync_min_time') {
-        ds.autosync_min_time = ensureInt(m.values[i].value);
-      } else if (field.fieldName == 'active_time_zone') {
-        ds.active_time_zone = ensureInt(m.values[i].value);
-      } else if (field.fieldName == 'time_mode') {
-        ds.time_mode = m.values[i].value;
-      } else if (field.fieldName == 'time_zone_offset') {
-        ds.time_zone_offset = ensureInt(m.values[i].value); // 10
-      } else if (field.fieldName == 'backlight_mode') {
-        ds.backlight_mode = m.values[i].value;
-      } else if (field.fieldName == 'activity_tracker_enabled') {
-        ds.activity_tracker_enabled = m.values[i].value; // 23
-      } else if (field.fieldName == 'move_alert_enabled') {
-        ds.move_alert_enabled = m.values[i].value; // 30
-      } else if (field.fieldName == 'mounting_side') {
-        ds.mounting_side = m.values[i].value; // 33
-      } else if (field.fieldName == 'lactate_threshold_autodetect_enabled') {
-        ds.lactate_threshold_autodetect_enabled = m.values[i].value; // 33
-      } else if (field.fieldName == 'number_of_screens') {
-        ds.number_of_screens = ensureInt(m.values[i].value); // 48
+      try {
+        if (field.fieldName == 'utc_offset') {
+          ds.utc_offset = ensureInt(m.values[i].value);
+        } else if (field.fieldName == 'time_offset') {
+          ds.time_offset = ensureInt(m.values[i].value);
+        } else if (field.fieldName == 'autosync_min_steps') {
+          ds.autosync_min_steps = ensureInt(m.values[i].value);
+        } else if (field.fieldName == 'autosync_min_time') {
+          ds.autosync_min_time = ensureInt(m.values[i].value);
+        } else if (field.fieldName == 'active_time_zone') {
+          ds.active_time_zone = ensureInt(m.values[i].value);
+        } else if (field.fieldName == 'time_mode') {
+          ds.time_mode = m.values[i].value;
+        } else if (field.fieldName == 'time_zone_offset') {
+          ds.time_zone_offset = ensureInt(m.values[i].value); // 10
+        } else if (field.fieldName == 'backlight_mode') {
+          ds.backlight_mode = m.values[i].value;
+        } else if (field.fieldName == 'activity_tracker_enabled') {
+          ds.activity_tracker_enabled = m.values[i].value; // 23
+        } else if (field.fieldName == 'move_alert_enabled') {
+          ds.move_alert_enabled = m.values[i].value; // 30
+        } else if (field.fieldName == 'mounting_side') {
+          // side enum right 0
+          //           left 1
+          if (m.values[i].value == 0 || m.values[i].value == 'right') {
+            ds.mounting_side = 'right';
+          } else if (m.values[i].value == 1 || m.values[i].value == 'left') {
+            ds.mounting_side = 'left';
+          }
+        } else if (field.fieldName == 'lactate_threshold_autodetect_enabled') {
+          ds.lactate_threshold_autodetect_enabled = m.values[i].value; // 33
+        } else if (field.fieldName == 'number_of_screens') {
+          ds.number_of_screens = ensureInt(m.values[i].value); // 48
+        }
+      } catch (e) {
+        print(
+          'Error parsing device settings: [${field.fieldName}]: ${m.values[i].value}',
+        );
+        print(e.toString());
+        print(e.stackTrace);
       }
     }
 

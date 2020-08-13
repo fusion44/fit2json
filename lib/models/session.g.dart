@@ -8,130 +8,108 @@ part of 'session.dart';
 
 Session _$SessionFromJson(Map<String, dynamic> json) {
   return Session()
-    ..timestamp = (json['timestamp'] as num)?.toDouble()
-    ..timestamp_offset = (json['timestamp_offset'] as num)?.toDouble()
-    ..timestamp_scale = (json['timestamp_scale'] as num)?.toDouble()
+    ..timestamp = json['timestamp'] as int
+    ..timestamp_offset = json['timestamp_offset'] as int
+    ..timestamp_scale = json['timestamp_scale'] as int
     ..timestamp_unit = json['timestamp_unit'] as String
-    ..start_time = (json['start_time'] as num)?.toDouble()
-    ..start_time_offset = (json['start_time_offset'] as num)?.toDouble()
-    ..start_time_scale = (json['start_time_scale'] as num)?.toDouble()
+    ..start_time = json['start_time'] as int
+    ..start_time_offset = json['start_time_offset'] as int
+    ..start_time_scale = json['start_time_scale'] as int
     ..start_time_unit = json['start_time_unit'] as String
-    ..start_position_lat = (json['start_position_lat'] as num)?.toDouble()
-    ..start_position_lat_offset =
-        (json['start_position_lat_offset'] as num)?.toDouble()
-    ..start_position_lat_scale =
-        (json['start_position_lat_scale'] as num)?.toDouble()
+    ..start_position_lat = json['start_position_lat'] as int
+    ..start_position_lat_offset = json['start_position_lat_offset'] as int
+    ..start_position_lat_scale = json['start_position_lat_scale'] as int
     ..start_position_lat_unit = json['start_position_lat_unit'] as String
-    ..start_position_long = (json['start_position_long'] as num)?.toDouble()
-    ..start_position_long_offset =
-        (json['start_position_long_offset'] as num)?.toDouble()
-    ..start_position_long_scale =
-        (json['start_position_long_scale'] as num)?.toDouble()
+    ..start_position_long = json['start_position_long'] as int
+    ..start_position_long_offset = json['start_position_long_offset'] as int
+    ..start_position_long_scale = json['start_position_long_scale'] as int
     ..start_position_long_unit = json['start_position_long_unit'] as String
-    ..total_elapsed_time = (json['total_elapsed_time'] as num)?.toDouble()
-    ..total_elapsed_time_offset =
-        (json['total_elapsed_time_offset'] as num)?.toDouble()
-    ..total_elapsed_time_scale =
-        (json['total_elapsed_time_scale'] as num)?.toDouble()
+    ..total_elapsed_time = json['total_elapsed_time'] as int
+    ..total_elapsed_time_offset = json['total_elapsed_time_offset'] as int
+    ..total_elapsed_time_scale = json['total_elapsed_time_scale'] as int
     ..total_elapsed_time_unit = json['total_elapsed_time_unit'] as String
-    ..total_timer_time = (json['total_timer_time'] as num)?.toDouble()
-    ..total_timer_time_offset =
-        (json['total_timer_time_offset'] as num)?.toDouble()
-    ..total_timer_time_scale =
-        (json['total_timer_time_scale'] as num)?.toDouble()
+    ..total_timer_time = json['total_timer_time'] as int
+    ..total_timer_time_offset = json['total_timer_time_offset'] as int
+    ..total_timer_time_scale = json['total_timer_time_scale'] as int
     ..total_timer_time_unit = json['total_timer_time_unit'] as String
-    ..total_distance = (json['total_distance'] as num)?.toDouble()
-    ..total_distance_offset = (json['total_distance_offset'] as num)?.toDouble()
-    ..total_distance_scale = (json['total_distance_scale'] as num)?.toDouble()
+    ..total_distance = json['total_distance'] as int
+    ..total_distance_offset = json['total_distance_offset'] as int
+    ..total_distance_scale = json['total_distance_scale'] as int
     ..total_distance_unit = json['total_distance_unit'] as String
-    ..total_cycles = (json['total_cycles'] as num)?.toDouble()
-    ..total_cycles_offset = (json['total_cycles_offset'] as num)?.toDouble()
-    ..total_cycles_scale = (json['total_cycles_scale'] as num)?.toDouble()
+    ..total_cycles = json['total_cycles'] as int
+    ..total_cycles_offset = json['total_cycles_offset'] as int
+    ..total_cycles_scale = json['total_cycles_scale'] as int
     ..total_cycles_unit = json['total_cycles_unit'] as String
-    ..nec_lat = (json['nec_lat'] as num)?.toDouble()
-    ..nec_lat_offset = (json['nec_lat_offset'] as num)?.toDouble()
-    ..nec_lat_scale = (json['nec_lat_scale'] as num)?.toDouble()
+    ..nec_lat = json['nec_lat'] as int
+    ..nec_lat_offset = json['nec_lat_offset'] as int
+    ..nec_lat_scale = json['nec_lat_scale'] as int
     ..nec_lat_unit = json['nec_lat_unit'] as String
-    ..nec_long = (json['nec_long'] as num)?.toDouble()
-    ..nec_long_offset = (json['nec_long_offset'] as num)?.toDouble()
-    ..nec_long_scale = (json['nec_long_scale'] as num)?.toDouble()
+    ..nec_long = json['nec_long'] as int
+    ..nec_long_offset = json['nec_long_offset'] as int
+    ..nec_long_scale = json['nec_long_scale'] as int
     ..nec_long_unit = json['nec_long_unit'] as String
-    ..swc_lat = (json['swc_lat'] as num)?.toDouble()
-    ..swc_lat_offset = (json['swc_lat_offset'] as num)?.toDouble()
-    ..swc_lat_scale = (json['swc_lat_scale'] as num)?.toDouble()
+    ..swc_lat = json['swc_lat'] as int
+    ..swc_lat_offset = json['swc_lat_offset'] as int
+    ..swc_lat_scale = json['swc_lat_scale'] as int
     ..swc_lat_unit = json['swc_lat_unit'] as String
-    ..swc_long = (json['swc_long'] as num)?.toDouble()
-    ..swc_long_offset = (json['swc_long_offset'] as num)?.toDouble()
-    ..swc_long_scale = (json['swc_long_scale'] as num)?.toDouble()
+    ..swc_long = json['swc_long'] as int
+    ..swc_long_offset = json['swc_long_offset'] as int
+    ..swc_long_scale = json['swc_long_scale'] as int
     ..swc_long_unit = json['swc_long_unit'] as String
-    ..avg_stroke_count = (json['avg_stroke_count'] as num)?.toDouble()
-    ..avg_stroke_count_offset =
-        (json['avg_stroke_count_offset'] as num)?.toDouble()
-    ..avg_stroke_count_scale =
-        (json['avg_stroke_count_scale'] as num)?.toDouble()
+    ..avg_stroke_count = json['avg_stroke_count'] as int
+    ..avg_stroke_count_offset = json['avg_stroke_count_offset'] as int
+    ..avg_stroke_count_scale = json['avg_stroke_count_scale'] as int
     ..avg_stroke_count_unit = json['avg_stroke_count_unit'] as String
-    ..total_work = (json['total_work'] as num)?.toDouble()
-    ..total_work_offset = (json['total_work_offset'] as num)?.toDouble()
-    ..total_work_scale = (json['total_work_scale'] as num)?.toDouble()
+    ..total_work = json['total_work'] as int
+    ..total_work_offset = json['total_work_offset'] as int
+    ..total_work_scale = json['total_work_scale'] as int
     ..total_work_unit = json['total_work_unit'] as String
-    ..time_standing = (json['time_standing'] as num)?.toDouble()
-    ..time_standing_offset = (json['time_standing_offset'] as num)?.toDouble()
-    ..time_standing_scale = (json['time_standing_scale'] as num)?.toDouble()
+    ..time_standing = json['time_standing'] as int
+    ..time_standing_offset = json['time_standing_offset'] as int
+    ..time_standing_scale = json['time_standing_scale'] as int
     ..time_standing_unit = json['time_standing_unit'] as String
-    ..avg_left_power_phase = (json['avg_left_power_phase'] as List)
-        ?.map((e) => (e as num)?.toDouble())
-        ?.toList()
-    ..avg_left_power_phase_offset =
-        (json['avg_left_power_phase_offset'] as num)?.toDouble()
-    ..avg_left_power_phase_scale =
-        (json['avg_left_power_phase_scale'] as num)?.toDouble()
+    ..avg_left_power_phase =
+        (json['avg_left_power_phase'] as List)?.map((e) => e as int)?.toList()
+    ..avg_left_power_phase_offset = json['avg_left_power_phase_offset'] as int
+    ..avg_left_power_phase_scale = json['avg_left_power_phase_scale'] as int
     ..avg_left_power_phase_unit = json['avg_left_power_phase_unit'] as String
     ..avg_left_power_phase_peak = (json['avg_left_power_phase_peak'] as List)
-        ?.map((e) => (e as num)?.toDouble())
+        ?.map((e) => e as int)
         ?.toList()
     ..avg_left_power_phase_peak_offset =
-        (json['avg_left_power_phase_peak_offset'] as num)?.toDouble()
+        json['avg_left_power_phase_peak_offset'] as int
     ..avg_left_power_phase_peak_scale =
-        (json['avg_left_power_phase_peak_scale'] as num)?.toDouble()
+        json['avg_left_power_phase_peak_scale'] as int
     ..avg_left_power_phase_peak_unit =
         json['avg_left_power_phase_peak_unit'] as String
-    ..avg_right_power_phase = (json['avg_right_power_phase'] as List)
-        ?.map((e) => (e as num)?.toDouble())
-        ?.toList()
-    ..avg_right_power_phase_offset =
-        (json['avg_right_power_phase_offset'] as num)?.toDouble()
-    ..avg_right_power_phase_scale =
-        (json['avg_right_power_phase_scale'] as num)?.toDouble()
+    ..avg_right_power_phase =
+        (json['avg_right_power_phase'] as List)?.map((e) => e as int)?.toList()
+    ..avg_right_power_phase_offset = json['avg_right_power_phase_offset'] as int
+    ..avg_right_power_phase_scale = json['avg_right_power_phase_scale'] as int
     ..avg_right_power_phase_unit = json['avg_right_power_phase_unit'] as String
     ..avg_right_power_phase_peak = (json['avg_right_power_phase_peak'] as List)
-        ?.map((e) => (e as num)?.toDouble())
+        ?.map((e) => e as int)
         ?.toList()
     ..avg_right_power_phase_peak_offset =
-        (json['avg_right_power_phase_peak_offset'] as num)?.toDouble()
+        json['avg_right_power_phase_peak_offset'] as int
     ..avg_right_power_phase_peak_scale =
-        (json['avg_right_power_phase_peak_scale'] as num)?.toDouble()
+        json['avg_right_power_phase_peak_scale'] as int
     ..avg_right_power_phase_peak_unit =
         json['avg_right_power_phase_peak_unit'] as String
-    ..avg_power_position = (json['avg_power_position'] as List)
-        ?.map((e) => (e as num)?.toDouble())
-        ?.toList()
-    ..avg_power_position_offset =
-        (json['avg_power_position_offset'] as num)?.toDouble()
-    ..avg_power_position_scale =
-        (json['avg_power_position_scale'] as num)?.toDouble()
+    ..avg_power_position =
+        (json['avg_power_position'] as List)?.map((e) => e as int)?.toList()
+    ..avg_power_position_offset = json['avg_power_position_offset'] as int
+    ..avg_power_position_scale = json['avg_power_position_scale'] as int
     ..avg_power_position_unit = json['avg_power_position_unit'] as String
-    ..max_power_position = (json['max_power_position'] as List)
-        ?.map((e) => (e as num)?.toDouble())
-        ?.toList()
-    ..max_power_position_offset =
-        (json['max_power_position_offset'] as num)?.toDouble()
-    ..max_power_position_scale =
-        (json['max_power_position_scale'] as num)?.toDouble()
+    ..max_power_position =
+        (json['max_power_position'] as List)?.map((e) => e as int)?.toList()
+    ..max_power_position_offset = json['max_power_position_offset'] as int
+    ..max_power_position_scale = json['max_power_position_scale'] as int
     ..max_power_position_unit = json['max_power_position_unit'] as String
-    ..message_index = (json['message_index'] as num)?.toDouble()
-    ..total_calories = (json['total_calories'] as num)?.toDouble()
-    ..total_calories_offset = (json['total_calories_offset'] as num)?.toDouble()
-    ..total_calories_scale = (json['total_calories_scale'] as num)?.toDouble()
+    ..message_index = json['message_index'] as int
+    ..total_calories = json['total_calories'] as int
+    ..total_calories_offset = json['total_calories_offset'] as int
+    ..total_calories_scale = json['total_calories_scale'] as int
     ..total_calories_unit = json['total_calories_unit'] as String
     ..avg_speed = (json['avg_speed'] as num)?.toDouble()
     ..avg_speed_offset = (json['avg_speed_offset'] as num)?.toDouble()
@@ -141,188 +119,210 @@ Session _$SessionFromJson(Map<String, dynamic> json) {
     ..max_speed_offset = (json['max_speed_offset'] as num)?.toDouble()
     ..max_speed_scale = (json['max_speed_scale'] as num)?.toDouble()
     ..max_speed_unit = json['max_speed_unit'] as String
-    ..avg_power = (json['avg_power'] as num)?.toDouble()
-    ..avg_power_offset = (json['avg_power_offset'] as num)?.toDouble()
-    ..avg_power_scale = (json['avg_power_scale'] as num)?.toDouble()
+    ..avg_power = json['avg_power'] as int
+    ..avg_power_offset = json['avg_power_offset'] as int
+    ..avg_power_scale = json['avg_power_scale'] as int
     ..avg_power_unit = json['avg_power_unit'] as String
-    ..total_descent = (json['total_descent'] as num)?.toDouble()
-    ..total_descent_offset = (json['total_descent_offset'] as num)?.toDouble()
-    ..total_descent_scale = (json['total_descent_scale'] as num)?.toDouble()
+    ..total_descent = json['total_descent'] as int
+    ..total_descent_offset = json['total_descent_offset'] as int
+    ..total_descent_scale = json['total_descent_scale'] as int
     ..total_descent_unit = json['total_descent_unit'] as String
-    ..total_ascent = (json['total_ascent'] as num)?.toDouble()
-    ..total_ascent_offset = (json['total_ascent_offset'] as num)?.toDouble()
-    ..total_ascent_scale = (json['total_ascent_scale'] as num)?.toDouble()
+    ..total_ascent = json['total_ascent'] as int
+    ..total_ascent_offset = json['total_ascent_offset'] as int
+    ..total_ascent_scale = json['total_ascent_scale'] as int
     ..total_ascent_unit = json['total_ascent_unit'] as String
-    ..max_power = (json['max_power'] as num)?.toDouble()
-    ..max_power_offset = (json['max_power_offset'] as num)?.toDouble()
-    ..max_power_scale = (json['max_power_scale'] as num)?.toDouble()
+    ..max_altitude = json['max_altitude'] as int
+    ..max_altitude_offset = json['max_altitude_offset'] as int
+    ..max_altitude_scale = json['max_altitude_scale'] as int
+    ..max_altitude_unit = json['max_altitude_unit'] as String
+    ..max_power = json['max_power'] as int
+    ..max_power_offset = json['max_power_offset'] as int
+    ..max_power_scale = json['max_power_scale'] as int
     ..max_power_unit = json['max_power_unit'] as String
-    ..threshold_power = (json['threshold_power'] as num)?.toDouble()
-    ..threshold_power_offset =
-        (json['threshold_power_offset'] as num)?.toDouble()
-    ..threshold_power_scale = (json['threshold_power_scale'] as num)?.toDouble()
+    ..threshold_power = json['threshold_power'] as int
+    ..threshold_power_offset = json['threshold_power_offset'] as int
+    ..threshold_power_scale = json['threshold_power_scale'] as int
     ..threshold_power_unit = json['threshold_power_unit'] as String
-    ..first_lap_index = (json['first_lap_index'] as num)?.toDouble()
-    ..first_lap_index_offset =
-        (json['first_lap_index_offset'] as num)?.toDouble()
-    ..first_lap_index_scale = (json['first_lap_index_scale'] as num)?.toDouble()
+    ..first_lap_index = json['first_lap_index'] as int
+    ..first_lap_index_offset = json['first_lap_index_offset'] as int
+    ..first_lap_index_scale = json['first_lap_index_scale'] as int
     ..first_lap_index_unit = json['first_lap_index_unit'] as String
-    ..num_laps = (json['num_laps'] as num)?.toDouble()
-    ..num_laps_offset = (json['num_laps_offset'] as num)?.toDouble()
-    ..num_laps_scale = (json['num_laps_scale'] as num)?.toDouble()
+    ..num_laps = json['num_laps'] as int
+    ..num_laps_offset = json['num_laps_offset'] as int
+    ..num_laps_scale = json['num_laps_scale'] as int
     ..num_laps_unit = json['num_laps_unit'] as String
-    ..normalized_power = (json['normalized_power'] as num)?.toDouble()
-    ..normalized_power_offset =
-        (json['normalized_power_offset'] as num)?.toDouble()
-    ..normalized_power_scale =
-        (json['normalized_power_scale'] as num)?.toDouble()
+    ..normalized_power = json['normalized_power'] as int
+    ..normalized_power_offset = json['normalized_power_offset'] as int
+    ..normalized_power_scale = json['normalized_power_scale'] as int
     ..normalized_power_unit = json['normalized_power_unit'] as String
-    ..training_stress_score = (json['training_stress_score'] as num)?.toDouble()
-    ..training_stress_score_offset =
-        (json['training_stress_score_offset'] as num)?.toDouble()
-    ..training_stress_score_scale =
-        (json['training_stress_score_scale'] as num)?.toDouble()
+    ..training_stress_score = json['training_stress_score'] as int
+    ..training_stress_score_offset = json['training_stress_score_offset'] as int
+    ..training_stress_score_scale = json['training_stress_score_scale'] as int
     ..training_stress_score_unit = json['training_stress_score_unit'] as String
-    ..intensity_factor = (json['intensity_factor'] as num)?.toDouble()
-    ..intensity_factor_offset = (json['intensity_factor_offset'] as num)?.toDouble()
-    ..intensity_factor_scale = (json['intensity_factor_scale'] as num)?.toDouble()
+    ..intensity_factor = json['intensity_factor'] as int
+    ..intensity_factor_offset = json['intensity_factor_offset'] as int
+    ..intensity_factor_scale = json['intensity_factor_scale'] as int
     ..intensity_factor_unit = json['intensity_factor_unit'] as String
-    ..left_right_balance = (json['left_right_balance'] as num)?.toDouble()
-    ..left_right_balance_offset = (json['left_right_balance_offset'] as num)?.toDouble()
-    ..left_right_balance_scale = (json['left_right_balance_scale'] as num)?.toDouble()
+    ..left_right_balance = json['left_right_balance'] as int
+    ..left_right_balance_offset = json['left_right_balance_offset'] as int
+    ..left_right_balance_scale = json['left_right_balance_scale'] as int
     ..left_right_balance_unit = json['left_right_balance_unit'] as String
-    ..avg_stroke_distance = (json['avg_stroke_distance'] as num)?.toDouble()
-    ..avg_stroke_distance_offset = (json['avg_stroke_distance_offset'] as num)?.toDouble()
-    ..avg_stroke_distance_scale = (json['avg_stroke_distance_scale'] as num)?.toDouble()
+    ..avg_stroke_distance = json['avg_stroke_distance'] as int
+    ..avg_stroke_distance_offset = json['avg_stroke_distance_offset'] as int
+    ..avg_stroke_distance_scale = json['avg_stroke_distance_scale'] as int
     ..avg_stroke_distance_unit = json['avg_stroke_distance_unit'] as String
-    ..pool_length = (json['pool_length'] as num)?.toDouble()
-    ..pool_length_offset = (json['pool_length_offset'] as num)?.toDouble()
-    ..pool_length_scale = (json['pool_length_scale'] as num)?.toDouble()
+    ..pool_length = json['pool_length'] as int
+    ..pool_length_offset = json['pool_length_offset'] as int
+    ..pool_length_scale = json['pool_length_scale'] as int
     ..pool_length_unit = json['pool_length_unit'] as String
-    ..max_cadence_position = (json['max_cadence_position'] as List)?.map((e) => (e as num)?.toDouble())?.toList()
-    ..max_cadence_position_offset = (json['max_cadence_position_offset'] as num)?.toDouble()
-    ..max_cadence_position_scale = (json['max_cadence_position_scale'] as num)?.toDouble()
+    ..max_cadence_position =
+        (json['max_cadence_position'] as List)?.map((e) => e as int)?.toList()
+    ..max_cadence_position_offset = json['max_cadence_position_offset'] as int
+    ..max_cadence_position_scale = json['max_cadence_position_scale'] as int
     ..max_cadence_position_unit = json['max_cadence_position_unit'] as String
-    ..num_active_lengths = (json['num_active_lengths'] as num)?.toDouble()
-    ..num_active_lengths_offset = (json['num_active_lengths_offset'] as num)?.toDouble()
-    ..num_active_lengths_scale = (json['num_active_lengths_scale'] as num)?.toDouble()
+    ..num_active_lengths = json['num_active_lengths'] as int
+    ..num_active_lengths_offset = json['num_active_lengths_offset'] as int
+    ..num_active_lengths_scale = json['num_active_lengths_scale'] as int
     ..num_active_lengths_unit = json['num_active_lengths_unit'] as String
-    ..avg_vertical_oscillation = (json['avg_vertical_oscillation'] as num)?.toDouble()
-    ..avg_vertical_oscillation_offset = (json['avg_vertical_oscillation_offset'] as num)?.toDouble()
-    ..avg_vertical_oscillation_scale = (json['avg_vertical_oscillation_scale'] as num)?.toDouble()
-    ..avg_vertical_oscillation_unit = json['avg_vertical_oscillation_unit'] as String
-    ..avg_stance_time_percent = (json['avg_stance_time_percent'] as num)?.toDouble()
-    ..avg_stance_time_percent_offset = (json['avg_stance_time_percent_offset'] as num)?.toDouble()
-    ..avg_stance_time_percent_scale = (json['avg_stance_time_percent_scale'] as num)?.toDouble()
-    ..avg_stance_time_percent_unit = json['avg_stance_time_percent_unit'] as String
-    ..avg_stance_time_balance = (json['avg_stance_time_balance'] as num)?.toDouble()
-    ..avg_stance_time_balance_offset = (json['avg_stance_time_balance_offset'] as num)?.toDouble()
-    ..avg_stance_time_balance_scale = (json['avg_stance_time_balance_scale'] as num)?.toDouble()
-    ..avg_stance_time_balance_unit = json['avg_stance_time_balance_unit'] as String
-    ..avg_stance_time = (json['avg_stance_time'] as num)?.toDouble()
-    ..avg_stance_time_offset = (json['avg_stance_time_offset'] as num)?.toDouble()
-    ..avg_stance_time_scale = (json['avg_stance_time_scale'] as num)?.toDouble()
+    ..avg_vertical_oscillation = json['avg_vertical_oscillation'] as int
+    ..avg_vertical_oscillation_offset =
+        json['avg_vertical_oscillation_offset'] as int
+    ..avg_vertical_oscillation_scale =
+        json['avg_vertical_oscillation_scale'] as int
+    ..avg_vertical_oscillation_unit =
+        json['avg_vertical_oscillation_unit'] as String
+    ..avg_stance_time_percent = json['avg_stance_time_percent'] as int
+    ..avg_stance_time_percent_offset =
+        json['avg_stance_time_percent_offset'] as int
+    ..avg_stance_time_percent_scale =
+        json['avg_stance_time_percent_scale'] as int
+    ..avg_stance_time_percent_unit =
+        json['avg_stance_time_percent_unit'] as String
+    ..avg_stance_time_balance = json['avg_stance_time_balance'] as int
+    ..avg_stance_time_balance_offset =
+        json['avg_stance_time_balance_offset'] as int
+    ..avg_stance_time_balance_scale =
+        json['avg_stance_time_balance_scale'] as int
+    ..avg_stance_time_balance_unit =
+        json['avg_stance_time_balance_unit'] as String
+    ..avg_stance_time = json['avg_stance_time'] as int
+    ..avg_stance_time_offset = json['avg_stance_time_offset'] as int
+    ..avg_stance_time_scale = json['avg_stance_time_scale'] as int
     ..avg_stance_time_unit = json['avg_stance_time_unit'] as String
-    ..stand_count = (json['stand_count'] as num)?.toDouble()
-    ..stand_count_offset = (json['stand_count_offset'] as num)?.toDouble()
-    ..stand_count_scale = (json['stand_count_scale'] as num)?.toDouble()
+    ..stand_count = json['stand_count'] as int
+    ..stand_count_offset = json['stand_count_offset'] as int
+    ..stand_count_scale = json['stand_count_scale'] as int
     ..stand_count_unit = json['stand_count_unit'] as String
-    ..avg_vertical_ratio = (json['avg_vertical_ratio'] as num)?.toDouble()
-    ..avg_vertical_ratio_offset = (json['avg_vertical_ratio_offset'] as num)?.toDouble()
-    ..avg_vertical_ratio_scale = (json['avg_vertical_ratio_scale'] as num)?.toDouble()
+    ..avg_vertical_ratio = json['avg_vertical_ratio'] as int
+    ..avg_vertical_ratio_offset = json['avg_vertical_ratio_offset'] as int
+    ..avg_vertical_ratio_scale = json['avg_vertical_ratio_scale'] as int
     ..avg_vertical_ratio_unit = json['avg_vertical_ratio_unit'] as String
-    ..avg_step_length = (json['avg_step_length'] as num)?.toDouble()
-    ..avg_step_length_offset = (json['avg_step_length_offset'] as num)?.toDouble()
-    ..avg_step_length_scale = (json['avg_step_length_scale'] as num)?.toDouble()
+    ..avg_step_length = json['avg_step_length'] as int
+    ..avg_step_length_offset = json['avg_step_length_offset'] as int
+    ..avg_step_length_scale = json['avg_step_length_scale'] as int
     ..avg_step_length_unit = json['avg_step_length_unit'] as String
     ..event = json['event'] as String
     ..event_type = json['event_type'] as String
     ..sport = json['sport'] as String
     ..sub_sport = json['sub_sport'] as String
-    ..avg_heart_rate = (json['avg_heart_rate'] as num)?.toDouble()
-    ..avg_heart_rate_offset = (json['avg_heart_rate_offset'] as num)?.toDouble()
-    ..avg_heart_rate_scale = (json['avg_heart_rate_scale'] as num)?.toDouble()
+    ..avg_heart_rate = json['avg_heart_rate'] as int
+    ..avg_heart_rate_offset = json['avg_heart_rate_offset'] as int
+    ..avg_heart_rate_scale = json['avg_heart_rate_scale'] as int
     ..avg_heart_rate_unit = json['avg_heart_rate_unit'] as String
-    ..max_heart_rate = (json['max_heart_rate'] as num)?.toDouble()
-    ..max_heart_rate_offset = (json['max_heart_rate_offset'] as num)?.toDouble()
-    ..max_heart_rate_scale = (json['max_heart_rate_scale'] as num)?.toDouble()
+    ..max_heart_rate = json['max_heart_rate'] as int
+    ..max_heart_rate_offset = json['max_heart_rate_offset'] as int
+    ..max_heart_rate_scale = json['max_heart_rate_scale'] as int
     ..max_heart_rate_unit = json['max_heart_rate_unit'] as String
-    ..avg_cadence = (json['avg_cadence'] as num)?.toDouble()
-    ..avg_cadence_offset = (json['avg_cadence_offset'] as num)?.toDouble()
-    ..avg_cadence_scale = (json['avg_cadence_scale'] as num)?.toDouble()
+    ..avg_cadence = json['avg_cadence'] as int
+    ..avg_cadence_offset = json['avg_cadence_offset'] as int
+    ..avg_cadence_scale = json['avg_cadence_scale'] as int
     ..avg_cadence_unit = json['avg_cadence_unit'] as String
-    ..max_cadence = (json['max_cadence'] as num)?.toDouble()
-    ..max_cadence_offset = (json['max_cadence_offset'] as num)?.toDouble()
-    ..max_cadence_scale = (json['max_cadence_scale'] as num)?.toDouble()
+    ..max_cadence = json['max_cadence'] as int
+    ..max_cadence_offset = json['max_cadence_offset'] as int
+    ..max_cadence_scale = json['max_cadence_scale'] as int
     ..max_cadence_unit = json['max_cadence_unit'] as String
-    ..total_training_effect = (json['total_training_effect'] as num)?.toDouble()
-    ..total_training_effect_offset = (json['total_training_effect_offset'] as num)?.toDouble()
-    ..total_training_effect_scale = (json['total_training_effect_scale'] as num)?.toDouble()
+    ..total_training_effect = json['total_training_effect'] as int
+    ..total_training_effect_offset = json['total_training_effect_offset'] as int
+    ..total_training_effect_scale = json['total_training_effect_scale'] as int
     ..total_training_effect_unit = json['total_training_effect_unit'] as String
-    ..event_group = (json['event_group'] as num)?.toDouble()
-    ..event_group_offset = (json['event_group_offset'] as num)?.toDouble()
-    ..event_group_scale = (json['event_group_scale'] as num)?.toDouble()
+    ..event_group = json['event_group'] as int
+    ..event_group_offset = json['event_group_offset'] as int
+    ..event_group_scale = json['event_group_scale'] as int
     ..event_group_unit = json['event_group_unit'] as String
     ..trigger = json['trigger'] as String
-    ..swim_stroke = (json['swim_stroke'] as num)?.toDouble()
-    ..swim_stroke_offset = (json['swim_stroke_offset'] as num)?.toDouble()
-    ..swim_stroke_scale = (json['swim_stroke_scale'] as num)?.toDouble()
+    ..swim_stroke = json['swim_stroke'] as int
+    ..swim_stroke_offset = json['swim_stroke_offset'] as int
+    ..swim_stroke_scale = json['swim_stroke_scale'] as int
     ..swim_stroke_unit = json['swim_stroke_unit'] as String
-    ..avg_temperature = (json['avg_temperature'] as num)?.toDouble()
-    ..avg_temperature_offset = (json['avg_temperature_offset'] as num)?.toDouble()
-    ..avg_temperature_scale = (json['avg_temperature_scale'] as num)?.toDouble()
+    ..avg_temperature = json['avg_temperature'] as int
+    ..avg_temperature_offset = json['avg_temperature_offset'] as int
+    ..avg_temperature_scale = json['avg_temperature_scale'] as int
     ..avg_temperature_unit = json['avg_temperature_unit'] as String
-    ..max_temperature = (json['max_temperature'] as num)?.toDouble()
-    ..max_temperature_offset = (json['max_temperature_offset'] as num)?.toDouble()
-    ..max_temperature_scale = (json['max_temperature_scale'] as num)?.toDouble()
+    ..max_temperature = json['max_temperature'] as int
+    ..max_temperature_offset = json['max_temperature_offset'] as int
+    ..max_temperature_scale = json['max_temperature_scale'] as int
     ..max_temperature_unit = json['max_temperature_unit'] as String
-    ..avg_fractional_cadence = (json['avg_fractional_cadence'] as num)?.toDouble()
-    ..avg_fractional_cadence_offset = (json['avg_fractional_cadence_offset'] as num)?.toDouble()
-    ..avg_fractional_cadence_scale = (json['avg_fractional_cadence_scale'] as num)?.toDouble()
-    ..avg_fractional_cadence_unit = json['avg_fractional_cadence_unit'] as String
-    ..max_fractional_cadence = (json['max_fractional_cadence'] as num)?.toDouble()
-    ..max_fractional_cadence_offset = (json['max_fractional_cadence_offset'] as num)?.toDouble()
-    ..max_fractional_cadence_scale = (json['max_fractional_cadence_scale'] as num)?.toDouble()
-    ..max_fractional_cadence_unit = json['max_fractional_cadence_unit'] as String
-    ..total_fractional_cycles = (json['total_fractional_cycles'] as num)?.toDouble()
-    ..total_fractional_cycles_offset = (json['total_fractional_cycles_offset'] as num)?.toDouble()
-    ..total_fractional_cycles_scale = (json['total_fractional_cycles_scale'] as num)?.toDouble()
-    ..total_fractional_cycles_unit = json['total_fractional_cycles_unit'] as String
-    ..avg_right_torque_effectiveness = (json['avg_right_torque_effectiveness'] as num)?.toDouble()
-    ..avg_right_torque_effectiveness_offset = (json['avg_right_torque_effectiveness_offset'] as num)?.toDouble()
-    ..avg_right_torque_effectiveness_scale = (json['avg_right_torque_effectiveness_scale'] as num)?.toDouble()
-    ..avg_right_torque_effectiveness_unit = json['avg_right_torque_effectiveness_unit'] as String
-    ..avg_left_pedal_smoothness = (json['avg_left_pedal_smoothness'] as num)?.toDouble()
-    ..avg_left_pedal_smoothness_offset = (json['avg_left_pedal_smoothness_offset'] as num)?.toDouble()
-    ..avg_left_pedal_smoothness_scale = (json['avg_left_pedal_smoothness_scale'] as num)?.toDouble()
-    ..avg_left_pedal_smoothness_unit = json['avg_left_pedal_smoothness_unit'] as String
-    ..avg_left_torque_effectiveness = (json['avg_left_torque_effectiveness'] as num)?.toDouble()
-    ..avg_left_torque_effectiveness_offset = (json['avg_left_torque_effectiveness_offset'] as num)?.toDouble()
-    ..avg_left_torque_effectiveness_scale = (json['avg_left_torque_effectiveness_scale'] as num)?.toDouble()
+    ..avg_fractional_cadence = json['avg_fractional_cadence'] as int
+    ..avg_fractional_cadence_offset =
+        json['avg_fractional_cadence_offset'] as int
+    ..avg_fractional_cadence_scale = json['avg_fractional_cadence_scale'] as int
+    ..avg_fractional_cadence_unit =
+        json['avg_fractional_cadence_unit'] as String
+    ..max_fractional_cadence = json['max_fractional_cadence'] as int
+    ..max_fractional_cadence_offset =
+        json['max_fractional_cadence_offset'] as int
+    ..max_fractional_cadence_scale = json['max_fractional_cadence_scale'] as int
+    ..max_fractional_cadence_unit =
+        json['max_fractional_cadence_unit'] as String
+    ..total_fractional_cycles = json['total_fractional_cycles'] as int
+    ..total_fractional_cycles_offset =
+        json['total_fractional_cycles_offset'] as int
+    ..total_fractional_cycles_scale =
+        json['total_fractional_cycles_scale'] as int
+    ..total_fractional_cycles_unit =
+        json['total_fractional_cycles_unit'] as String
+    ..avg_right_torque_effectiveness =
+        json['avg_right_torque_effectiveness'] as int
+    ..avg_right_torque_effectiveness_offset =
+        json['avg_right_torque_effectiveness_offset'] as int
+    ..avg_right_torque_effectiveness_scale =
+        json['avg_right_torque_effectiveness_scale'] as int
+    ..avg_right_torque_effectiveness_unit =
+        json['avg_right_torque_effectiveness_unit'] as String
+    ..avg_left_pedal_smoothness = json['avg_left_pedal_smoothness'] as int
+    ..avg_left_pedal_smoothness_offset =
+        json['avg_left_pedal_smoothness_offset'] as int
+    ..avg_left_pedal_smoothness_scale =
+        json['avg_left_pedal_smoothness_scale'] as int
+    ..avg_left_pedal_smoothness_unit =
+        json['avg_left_pedal_smoothness_unit'] as String
+    ..avg_left_torque_effectiveness = json['avg_left_torque_effectiveness'] as int
+    ..avg_left_torque_effectiveness_offset = json['avg_left_torque_effectiveness_offset'] as int
+    ..avg_left_torque_effectiveness_scale = json['avg_left_torque_effectiveness_scale'] as int
     ..avg_left_torque_effectiveness_unit = json['avg_left_torque_effectiveness_unit'] as String
-    ..avg_right_pedal_smoothness = (json['avg_right_pedal_smoothness'] as num)?.toDouble()
-    ..avg_right_pedal_smoothness_offset = (json['avg_right_pedal_smoothness_offset'] as num)?.toDouble()
-    ..avg_right_pedal_smoothness_scale = (json['avg_right_pedal_smoothness_scale'] as num)?.toDouble()
+    ..avg_right_pedal_smoothness = json['avg_right_pedal_smoothness'] as int
+    ..avg_right_pedal_smoothness_offset = json['avg_right_pedal_smoothness_offset'] as int
+    ..avg_right_pedal_smoothness_scale = json['avg_right_pedal_smoothness_scale'] as int
     ..avg_right_pedal_smoothness_unit = json['avg_right_pedal_smoothness_unit'] as String
-    ..avg_combined_pedal_smoothness = (json['avg_combined_pedal_smoothness'] as num)?.toDouble()
-    ..avg_combined_pedal_smoothness_offset = (json['avg_combined_pedal_smoothness_offset'] as num)?.toDouble()
-    ..avg_combined_pedal_smoothness_scale = (json['avg_combined_pedal_smoothness_scale'] as num)?.toDouble()
+    ..avg_combined_pedal_smoothness = json['avg_combined_pedal_smoothness'] as int
+    ..avg_combined_pedal_smoothness_offset = json['avg_combined_pedal_smoothness_offset'] as int
+    ..avg_combined_pedal_smoothness_scale = json['avg_combined_pedal_smoothness_scale'] as int
     ..avg_combined_pedal_smoothness_unit = json['avg_combined_pedal_smoothness_unit'] as String
-    ..sport_index = (json['sport_index'] as num)?.toDouble()
-    ..sport_index_offset = (json['sport_index_offset'] as num)?.toDouble()
-    ..sport_index_scale = (json['sport_index_scale'] as num)?.toDouble()
+    ..sport_index = json['sport_index'] as int
+    ..sport_index_offset = json['sport_index_offset'] as int
+    ..sport_index_scale = json['sport_index_scale'] as int
     ..sport_index_unit = json['sport_index_unit'] as String
-    ..avg_left_pco = (json['avg_left_pco'] as num)?.toDouble()
-    ..avg_left_pco_offset = (json['avg_left_pco_offset'] as num)?.toDouble()
-    ..avg_left_pco_scale = (json['avg_left_pco_scale'] as num)?.toDouble()
+    ..avg_left_pco = json['avg_left_pco'] as int
+    ..avg_left_pco_offset = json['avg_left_pco_offset'] as int
+    ..avg_left_pco_scale = json['avg_left_pco_scale'] as int
     ..avg_left_pco_unit = json['avg_left_pco_unit'] as String
-    ..avg_right_pco = (json['avg_right_pco'] as num)?.toDouble()
-    ..avg_right_pco_offset = (json['avg_right_pco_offset'] as num)?.toDouble()
-    ..avg_right_pco_scale = (json['avg_right_pco_scale'] as num)?.toDouble()
+    ..avg_right_pco = json['avg_right_pco'] as int
+    ..avg_right_pco_offset = json['avg_right_pco_offset'] as int
+    ..avg_right_pco_scale = json['avg_right_pco_scale'] as int
     ..avg_right_pco_unit = json['avg_right_pco_unit'] as String
-    ..avg_cadence_position = (json['avg_cadence_position'] as List)?.map((e) => (e as num)?.toDouble())?.toList()
-    ..avg_cadence_position_offset = (json['avg_cadence_position_offset'] as num)?.toDouble()
-    ..avg_cadence_position_scale = (json['avg_cadence_position_scale'] as num)?.toDouble()
+    ..avg_cadence_position = (json['avg_cadence_position'] as List)?.map((e) => e as int)?.toList()
+    ..avg_cadence_position_offset = json['avg_cadence_position_offset'] as int
+    ..avg_cadence_position_scale = json['avg_cadence_position_scale'] as int
     ..avg_cadence_position_unit = json['avg_cadence_position_unit'] as String;
 }
 
@@ -441,6 +441,10 @@ Map<String, dynamic> _$SessionToJson(Session instance) => <String, dynamic>{
       'total_ascent_offset': instance.total_ascent_offset,
       'total_ascent_scale': instance.total_ascent_scale,
       'total_ascent_unit': instance.total_ascent_unit,
+      'max_altitude': instance.max_altitude,
+      'max_altitude_offset': instance.max_altitude_offset,
+      'max_altitude_scale': instance.max_altitude_scale,
+      'max_altitude_unit': instance.max_altitude_unit,
       'max_power': instance.max_power,
       'max_power_offset': instance.max_power_offset,
       'max_power_scale': instance.max_power_scale,

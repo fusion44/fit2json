@@ -18,7 +18,7 @@ DeviceSettings _$DeviceSettingsFromJson(Map<String, dynamic> json) {
     ..backlight_mode = json['backlight_mode'] as String
     ..activity_tracker_enabled = json['activity_tracker_enabled'] as bool
     ..move_alert_enabled = json['move_alert_enabled'] as bool
-    ..mounting_side = json['mounting_side'] as int
+    ..mounting_side = json['mounting_side'] as String
     ..lactate_threshold_autodetect_enabled =
         json['lactate_threshold_autodetect_enabled'] as bool
     ..number_of_screens = json['number_of_screens'] as int;

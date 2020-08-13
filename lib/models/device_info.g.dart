@@ -16,9 +16,9 @@ DeviceInfo _$DeviceInfoFromJson(Map<String, dynamic> json) {
     software_version: (json['software_version'] as num)?.toDouble(),
     battery_voltage: (json['battery_voltage'] as num)?.toDouble(),
     device_index: json['device_index'] as String,
-    device_type: json['device_type'] as int,
+    device_type: json['device_type'] as String,
     hardware_version: json['hardware_version'] as int,
-    battery_status: json['battery_status'] as int,
+    battery_status: json['battery_status'] as String,
     source_type: json['source_type'] as String,
     ant_network: json['ant_network'] as String,
   );
